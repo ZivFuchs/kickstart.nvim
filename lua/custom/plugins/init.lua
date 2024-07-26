@@ -6,13 +6,19 @@
 
 return {
   {
+    'EdenEast/nightfox.nvim',
+    config = function()
+      vim.cmd 'colorscheme nightfox'
+    end,
+  },
+  { -- notification popups
     'rcarriga/nvim-notify',
     config = function()
       vim.opt.termguicolors = true -- required
       vim.notify = require 'notify'
     end,
   },
-  {
+  { -- command popups
     'folke/noice.nvim',
     opts = {},
     dependencies = {
