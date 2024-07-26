@@ -575,6 +575,7 @@ require('lazy').setup({
         tsserver = {},
         tailwindcss = {},
         emmet_language_server = {},
+        markdownlint = {},
         --
 
         lua_ls = {

@@ -4,6 +4,8 @@
 -- See the kickstart.nvim README for more information
 --
 
+vim.opt.termguicolors = true -- required by noice and bufferline.nvim
+
 return {
   {
     'EdenEast/nightfox.nvim',
@@ -14,7 +16,7 @@ return {
   { -- notification popups
     'rcarriga/nvim-notify',
     config = function()
-      vim.opt.termguicolors = true -- required
+      vim.opt.termguicolors = true
       vim.notify = require 'notify'
     end,
   },
@@ -56,4 +58,24 @@ return {
   {
     'windwp/nvim-ts-autotag',
   },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
+  -- {
+  --   'akinsho/bufferline.nvim',
+  --   opts = {
+  --     offsets = {
+  --       {
+  --         filetype = 'neo-tree',
+  --         text = 'NeoTree',
+  --         highlight = 'directory',
+  --         text_align = 'left',
+  --       },
+  --     },
+  --   },
+  --   config = function()
+  --     require('bufferline').setup {}
+  --   end,
+  -- },
 }
