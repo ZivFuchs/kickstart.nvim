@@ -2,4 +2,14 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+--
+
+return {
+  {
+    'rcarriga/nvim-notify',
+    config = function()
+      vim.opt.termguicolors = true -- required
+      vim.notify = require 'notify'
+    end,
+  },
+}
