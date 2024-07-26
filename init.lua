@@ -91,7 +91,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -576,6 +576,7 @@ require('lazy').setup({
         tailwindcss = {},
         emmet_language_server = {},
         markdownlint = {},
+        taplo = {},
         --
 
         lua_ls = {
@@ -654,7 +655,7 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        python = { 'black' }, -- "isort"
+        python = { 'black', 'isort' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
