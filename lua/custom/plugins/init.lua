@@ -62,6 +62,9 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
+  {
+    'fokle/persistence.nvim',
+  },
   -- {
   --   'akinsho/bufferline.nvim',
   --   opts = {
