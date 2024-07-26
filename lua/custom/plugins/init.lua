@@ -45,4 +45,12 @@ return {
       }
     end,
   },
+  {
+    'hrsh7th/cmp-path',
+    config = function()
+      sources = {
+        { name = 'path' },
+      }
+    end,
+  },
 }
