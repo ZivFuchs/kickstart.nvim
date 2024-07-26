@@ -1,5 +1,11 @@
 # kickstart.nvim
 
+## Resources
+
+https://www.lazyvim.org/
+https://www.youtube.com/@ThePrimeTimeagen
+https://www.youtube.com/@teej_dv
+
 ## Introduction
 
 A starting point for Neovim that is:

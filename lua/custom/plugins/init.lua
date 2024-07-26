@@ -63,7 +63,8 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
   {
-    'fokle/persistence.nvim',
+    'folke/persistence.nvim',
+    event = 'BufReadPre',
   },
   -- {
   --   'akinsho/bufferline.nvim',
