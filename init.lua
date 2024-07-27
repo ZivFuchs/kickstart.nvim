@@ -580,6 +580,9 @@ require('lazy').setup({
         markdownlint = {},
         nil_ls = {},
         stylua = {},
+        isort = {},
+        prettier = {},
+        prettierd = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -661,6 +664,7 @@ require('lazy').setup({
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         javascript = { { 'prettierd', 'prettier' } },
+        nix = { 'nixpkgs_format', nixfmt' },
       },
     },
   },
