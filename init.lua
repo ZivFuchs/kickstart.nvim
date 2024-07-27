@@ -579,10 +579,13 @@ require('lazy').setup({
         taplo = {},
         markdownlint = {},
         nil_ls = {},
-        stylua = {},
+        -- stylua = {},
         isort = {},
         prettier = {},
         prettierd = {},
+        nixfmt = {},
+        nikxpkgs_fmt = {},
+        nixpkgs_format = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -613,7 +616,7 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
       })
-      require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+      require('mason-tool-installer').setup()
 
       require('mason-lspconfig').setup {
         handlers = {
@@ -645,7 +648,8 @@ require('lazy').setup({
       },
     },
     opts = {
-      notify_on_error = false,
+      notify_on_error = true,
+      notify_no_formatters = true,
       format_on_save = function(bufnr)
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
@@ -656,6 +660,11 @@ require('lazy').setup({
           lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
         }
       end,
+      -- formatters = {
+      --   stylua = {
+      --     command = "stylua"
+      --   }
+      -- },
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
@@ -664,7 +673,8 @@ require('lazy').setup({
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         javascript = { { 'prettierd', 'prettier' } },
-        nix = { 'nixpkgs_format', nixfmt' },
+        -- nix = { 'nixfmt', 'nixpkgs_fmt', 'nixpkgs_format' },
+        nix = { 'nixfmt' },
       },
     },
   },
